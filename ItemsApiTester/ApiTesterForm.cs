@@ -15,9 +15,9 @@ using System.Windows.Forms;
 
 namespace ItemsApiTester
 {
-    public partial class Form1 : Form
+    public partial class ApiTesterForm : Form
     {
-        public Form1()
+        public ApiTesterForm()
         {
             InitializeComponent();
             // Setting defaults
@@ -207,6 +207,7 @@ namespace ItemsApiTester
                 string jsonresultserialized = JsonConvert.SerializeObject(jsonresult, Formatting.Indented);
                 JsonOutput.AppendText(Environment.NewLine + jsonresultserialized);
 
+                // Still here because there's some stuff about this API that is not accounted for in 
                 //JsonOutput.AppendText(Environment.NewLine + result);
 
             }

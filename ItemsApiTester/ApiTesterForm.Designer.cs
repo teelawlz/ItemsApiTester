@@ -1,6 +1,6 @@
 ﻿namespace ItemsApiTester
 {
-    partial class Form1
+    partial class ApiTesterForm
     {
         /// <summary>
         /// Required designer variable.
