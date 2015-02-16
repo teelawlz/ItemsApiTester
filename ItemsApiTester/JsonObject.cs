@@ -16,7 +16,7 @@ namespace ItemsApiTester
         public int stackable { get; set; }
         public int itemBind { get; set; }
         public List<bonusStats> bonusStats { get; set; }
-        public List<string> itemSpells { get; set; }
+        public List<itemSpells> itemSpells { get; set; }
         public int buyPrice { get; set; }
         public int itemClass { get; set; }
         public int itemSubClass { get; set; }
@@ -66,5 +66,24 @@ namespace ItemsApiTester
     {
         public int stat { get; set; }
         public int amount { get; set; }
+    }
+
+    class itemSpells
+    {
+        public int spellId { get; set; }
+        public spell spell { get; set; }
+        public int nCharges { get; set; }
+        public bool consumable { get; set; }
+        public int categoryId { get; set; }
+        public string trigger { get; set; }
+    }
+
+    class spell
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string icon { get; set; }
+        public string castTime { get; set; }
     }
 }
