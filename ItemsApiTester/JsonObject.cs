@@ -15,7 +15,7 @@ namespace ItemsApiTester
         public string icon { get; set; }
         public int stackable { get; set; }
         public int itemBind { get; set; }
-        public List<string> bonusStats { get; set; }
+        public List<bonusStats> bonusStats { get; set; }
         public List<string> itemSpells { get; set; }
         public int buyPrice { get; set; }
         public int itemClass { get; set; }
@@ -60,5 +60,11 @@ namespace ItemsApiTester
         public List<string> defaultBonusLists { get; set; }
         public List<string> chanceBOnusLists { get; set; }
         public List<string> bonusChances { get; set; }
+    }
+
+    class bonusStats
+    {
+        public int stat { get; set; }
+        public int amount { get; set; }
     }
 }

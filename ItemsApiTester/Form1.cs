@@ -203,12 +203,11 @@ namespace ItemsApiTester
             {
                 string result = streamReader.ReadToEnd();
 
-                //var jsonresult = Newtonsoft.Json.Linq.JObject.Parse(result);
                 ItemJson jsonresult = JsonConvert.DeserializeObject<ItemJson>(result);
                 string jsonresultserialized = JsonConvert.SerializeObject(jsonresult, Formatting.Indented);
-                //JsonSerializer jsonresult = JsonSerializer.Create();
-
                 JsonOutput.AppendText(Environment.NewLine + jsonresultserialized);
+
+                //JsonOutput.AppendText(Environment.NewLine + result);
 
             }
         }

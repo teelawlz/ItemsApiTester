@@ -148,6 +148,7 @@
             this.JsonOutput.Multiline = true;
             this.JsonOutput.Name = "JsonOutput";
             this.JsonOutput.ReadOnly = true;
+            this.JsonOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.JsonOutput.Size = new System.Drawing.Size(473, 451);
             this.JsonOutput.TabIndex = 12;
             this.JsonOutput.Text = "URL to Hit:";
