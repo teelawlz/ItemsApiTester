@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.EntryFieldLabel = new System.Windows.Forms.Label();
             this.ItemRadio = new System.Windows.Forms.RadioButton();
             this.ItemSetRadio = new System.Windows.Forms.RadioButton();
             this.ExecuteRequest = new System.Windows.Forms.Button();
             this.UrlSuffixSelection = new System.Windows.Forms.Panel();
             this.RegionSelector = new System.Windows.Forms.ComboBox();
+            this.regionsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.requestControllerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.RegionLabel = new System.Windows.Forms.Label();
             this.LocaleSelector = new System.Windows.Forms.ComboBox();
             this.LocaleSelectorLabel = new System.Windows.Forms.Label();
             this.JsonOutput = new System.Windows.Forms.TextBox();
             this.IdField = new System.Windows.Forms.TextBox();
+            this.requestControllerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.UrlSuffixSelection.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.regionsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestControllerBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestControllerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // EntryFieldLabel
@@ -57,11 +64,11 @@
             this.ItemRadio.Checked = true;
             this.ItemRadio.Location = new System.Drawing.Point(3, 3);
             this.ItemRadio.Name = "ItemRadio";
-            this.ItemRadio.Size = new System.Drawing.Size(49, 17);
+            this.ItemRadio.Size = new System.Drawing.Size(44, 17);
             this.ItemRadio.TabIndex = 2;
             this.ItemRadio.TabStop = true;
             this.ItemRadio.Tag = "item/";
-            this.ItemRadio.Text = "/item";
+            this.ItemRadio.Text = "item";
             this.ItemRadio.UseVisualStyleBackColor = true;
             this.ItemRadio.CheckedChanged += new System.EventHandler(this.itemRadio_CheckedChanged);
             this.ItemRadio.Click += new System.EventHandler(this.itemRadio_CheckedChanged);
@@ -71,10 +78,10 @@
             this.ItemSetRadio.AutoSize = true;
             this.ItemSetRadio.Location = new System.Drawing.Point(54, 3);
             this.ItemSetRadio.Name = "ItemSetRadio";
-            this.ItemSetRadio.Size = new System.Drawing.Size(68, 17);
+            this.ItemSetRadio.Size = new System.Drawing.Size(63, 17);
             this.ItemSetRadio.TabIndex = 3;
             this.ItemSetRadio.Tag = "item/set/";
-            this.ItemSetRadio.Text = "/item/set";
+            this.ItemSetRadio.Text = "item/set";
             this.ItemSetRadio.UseVisualStyleBackColor = true;
             this.ItemSetRadio.CheckedChanged += new System.EventHandler(this.itemRadio_CheckedChanged);
             // 
@@ -105,13 +112,21 @@
             "US",
             "Europe",
             "Korea",
-            "Taiwan",
-            "China"});
+            "China",
+            "Taiwan"});
             this.RegionSelector.Location = new System.Drawing.Point(186, 59);
             this.RegionSelector.Name = "RegionSelector";
             this.RegionSelector.Size = new System.Drawing.Size(121, 21);
             this.RegionSelector.TabIndex = 7;
             this.RegionSelector.SelectedIndexChanged += new System.EventHandler(this.RegionSelector_SelectedIndexChanged);
+            // 
+            // regionsBindingSource
+            // 
+            this.regionsBindingSource.DataSource = typeof(ItemsApiTester.Regions);
+            // 
+            // requestControllerBindingSource1
+            // 
+            this.requestControllerBindingSource1.DataSource = typeof(ItemsApiTester.RequestController);
             // 
             // RegionLabel
             // 
@@ -163,7 +178,11 @@
             this.IdField.TextChanged += new System.EventHandler(this.IdField_TextChanged);
             this.IdField.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IdField_KeyPress);
             // 
-            // Form1
+            // requestControllerBindingSource
+            // 
+            this.requestControllerBindingSource.DataSource = typeof(ItemsApiTester.RequestController);
+            // 
+            // ApiTesterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,10 +198,13 @@
             this.Controls.Add(this.EntryFieldLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "ApiTesterForm";
             this.Text = "WoW Item API Tester";
             this.UrlSuffixSelection.ResumeLayout(false);
             this.UrlSuffixSelection.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.regionsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestControllerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.requestControllerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +223,9 @@
         private System.Windows.Forms.Label LocaleSelectorLabel;
         private System.Windows.Forms.TextBox JsonOutput;
         private System.Windows.Forms.TextBox IdField;
+        private System.Windows.Forms.BindingSource requestControllerBindingSource1;
+        private System.Windows.Forms.BindingSource requestControllerBindingSource;
+        private System.Windows.Forms.BindingSource regionsBindingSource;
     }
 }
 

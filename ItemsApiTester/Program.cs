@@ -16,7 +16,10 @@ namespace ItemsApiTester
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ApiTesterForm());
+            RequestController control = new RequestController();
+            ApiTesterForm ApiTesterForm = new ApiTesterForm();
+            ApiTesterForm.controller = control;
+            Application.Run(ApiTesterForm);            
         }
     }
 }
