@@ -1,6 +1,6 @@
 # ItemsApiTester
 
-COMPLETELY OUTDATED HI PROSPECTIVE EMPLOYER I APOLOGIZE FOR THIS ONE. A little UI for making API calls to the WoW Items database
+~~A little~~ COMPLETELY OUTDATED UI for making API calls to the WoW Items database
 
 ## The Gist
 
